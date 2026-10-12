@@ -45,7 +45,7 @@ class TestWebsiteSaleCouponAutorefresh(common.TransactionCase):
         cls.loyalty_program.rule_ids.minimum_amount = 100
         cls.loyalty_program.company_id.auto_refresh_coupon = True
         # Let's configure an extra trigger
-        cls.env["ir.config_parameter"].set_param(
+        cls.env["ir.config_parameter"].set_str(
             "sale_loyalty_auto_refresh.sale_order_triggers", "note"
         )
 
